@@ -12,7 +12,7 @@ const experienceData: Experience[] = [
     period: "Apr 2025 - Current",
     role: "Freelancing and building own projects",
     location: "São Paulo, Brazil/Remote",
-    roleDescription: "",
+    roleDescription: "new things learnt so far: building websites and deploying them without relevant coding experience",
   },
   {
     id: "e2",
