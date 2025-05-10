@@ -52,7 +52,7 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="py-16 md:py-24 space-y-16 md:space-y-20">
       <SectionTitle as="h2" className="text-left mb-12 md:mb-16">
-        CURRENT AND PAST PROJECTS
+        PERSONAL PROJECTS
       </SectionTitle>
       
       {projects.length > 0 ? (

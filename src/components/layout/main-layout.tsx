@@ -7,7 +7,7 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow w-full">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-8 sm:pb-10 md:pb-12">
          {children}
         </div>
       </main>

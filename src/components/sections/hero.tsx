@@ -4,13 +4,14 @@ export function HeroSection() {
   return (
     <section 
       id="hero" 
-      className="min-h-[calc(100vh-4rem)] flex flex-col items-start justify-start text-left pt-4 pb-10 md:pb-16 relative"
+      className="min-h-[calc(100vh-4rem)] flex flex-col items-start text-left relative pt-0"
+      style={{ paddingTop: 0, marginTop: '-1.5rem' }}
     >
-      <div className="relative z-10 w-full">
-        <h1 className="mb-0 animate-fade-in-up leading-none text-[12rem] md:text-[16rem] tracking-tighter">
+      <div className="relative z-10 w-full mt-[-1rem]">
+        <h1 className="mb-[-1.5rem] animate-fade-in-up leading-none text-[12rem] md:text-[16rem] tracking-tighter">
           JONAS
         </h1>
-        <h1 className="mb-0 animate-fade-in-up animation-delay-200 leading-none text-right text-[12rem] md:text-[16rem] tracking-tighter">
+        <h1 className="mb-[-1.5rem] animate-fade-in-up animation-delay-200 leading-none text-right text-[12rem] md:text-[16rem] tracking-tighter">
           FABIAN
         </h1>
         <h1 className="mb-10 md:mb-12 animate-fade-in-up animation-delay-300 leading-none text-[12rem] md:text-[16rem] tracking-tighter">
