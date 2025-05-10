@@ -1,4 +1,4 @@
-# Firebase Studio
+git c# Firebase Studio
 
 This is a NextJS starter in Firebase Studio.
 
