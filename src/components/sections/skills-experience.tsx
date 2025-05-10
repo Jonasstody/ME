@@ -12,7 +12,7 @@ const experienceData: Experience[] = [
     period: "Apr 2025 - Current",
     role: "Freelancing and building own projects",
     location: "São Paulo, Brazil/Remote",
-    roleDescription: "new things learnt so far: building websites and deploying them without relevant coding experience",
+    roleDescription: "New things learnt so far: building websites and deploying them without relevant coding experience",
   },
   {
     id: "e2",
@@ -39,29 +39,72 @@ export function SkillsExperienceSection() {
     <section id="experience" className="py-16 md:py-24">
       <SectionTitle as="h2" className="text-left mb-12 md:mb-16">EXPERIENCE</SectionTitle>
       
-      <div className="space-y-12 md:space-y-16">
-        {experienceData.map((exp, index) => (
-          <div key={exp.id} className="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-4">
-            <div className="md:col-span-3">
-              <p className="text-xs text-muted-foreground uppercase tracking-wider">{exp.period}</p>
+      <div className="space-y-20 md:space-y-24">
+        {experienceData.map((exp) => (
+          <div key={exp.id}>
+            <Separator className="mb-10" />
+            
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-6">
+              {/* Left Column */}
+              <div className="md:col-span-4 space-y-4">
+                <h3 className="text-2xl md:text-3xl text-foreground font-normal">
+                  {exp.company}
+                </h3>
+                
+                <p className="text-xs text-muted-foreground uppercase tracking-wider">
+                  {exp.period}
+                </p>
+                
+                <div className="space-y-3">
+                  <div>
+                    <p className="text-muted-foreground text-xs uppercase tracking-wider">Position</p>
+                    <p className="text-primary text-xl font-normal">{exp.role}</p>
+                  </div>
+                  
+                  <div>
+                    <p className="text-muted-foreground text-xs uppercase tracking-wider">Location</p>
+                    <p className="text-foreground">{exp.location}</p>
+                  </div>
+                  
+                  {exp.industry && (
+                    <div>
+                      <p className="text-muted-foreground text-xs uppercase tracking-wider">Industry</p>
+                      <p className="text-foreground">{exp.industry}</p>
+                    </div>
+                  )}
+                  
+                  {exp.websiteUrl && (
+                    <div>
+                      <p className="text-muted-foreground text-xs uppercase tracking-wider">Website</p>
+                      <Button variant="link" asChild className="text-primary p-0 h-auto group inline-flex items-center -ml-0.5">
+                        <Link href={exp.websiteUrl} target="_blank" rel="noopener noreferrer">
+                          {exp.websiteUrl.replace(/^https?:\/\//, '')}
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 h-4 w-4">
+                            <path d="M7 17L17 7"></path>
+                            <path d="M7 7h10v10"></path>
+                          </svg>
+                        </Link>
+                      </Button>
+                    </div>
+                  )}
+                </div>
+              </div>
+              
+              {/* Right Column */}
+              <div className="md:col-span-8 space-y-4">
+                {exp.roleDescription && (
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {exp.roleDescription}
+                  </p>
+                )}
+                
+                {exp.companyDescription && (
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {exp.companyDescription}
+                  </p>
+                )}
+              </div>
             </div>
-            <div className="md:col-span-9 space-y-2">
-              <h3 className="text-primary text-xl sm:text-2xl">{exp.role}</h3>
-              <p className="font-medium text-foreground/80 text-base">
-                {exp.company}
-                {exp.location && <span className="text-muted-foreground font-normal text-sm"> • {exp.location}</span>}
-              </p>
-              {exp.websiteUrl && (
-                <Button variant="link" asChild className="text-primary p-0 h-auto group inline-flex items-center text-xs uppercase tracking-wider -ml-0.5">
-                  <Link href={exp.websiteUrl} target="_blank" rel="noopener noreferrer">
-                    {exp.websiteUrl.replace(/^https?:\/\//, '')}
-                  </Link>
-                </Button>
-              )}
-              {exp.roleDescription && <p className="text-muted-foreground text-sm leading-relaxed mt-1">{exp.roleDescription}</p>}
-              {exp.companyDescription && <p className="text-muted-foreground text-sm leading-relaxed mt-3 italic">{exp.companyDescription}</p>}
-            </div>
-            {index < experienceData.length - 1 && <div className="md:col-span-12"><Separator className="mt-8 md:mt-12" /></div>}
           </div>
         ))}
       </div>
