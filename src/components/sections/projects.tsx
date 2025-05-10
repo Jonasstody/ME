@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -11,26 +10,26 @@ import { cn } from '@/lib/utils';
 const placeholderProjects: Project[] = [
   {
     id: "1",
-    title: "Excel Addin for Financial Modeling and Business Planning", // Updated title
-    subtitle: "Financial Modeling & Business Planning Tools",
-    year: "2024",
-    description: "Developed a comprehensive Excel add-in designed for financial modeling, business planning, and valuation. This tool empowers financial analysts and business strategists with advanced functionalities to streamline their workflows, perform complex calculations, and generate insightful reports directly within Excel. Key features include scenario analysis, sensitivity testing, discounted cash flow (DCF) valuation models, and customizable templates for various financial statements.",
-    imageUrl: "https://picsum.photos/seed/exceladdin/800/600",
+    title: "Excel Addin", 
+    subtitle: "under devlopment",
+    year: "2025",
+    description: "tba",
+    imageUrl: "/images/exceladdin.png",
     projectUrl: undefined,
     repoUrl: undefined,
-    tags: ["Excel", "VBA", "Financial Modeling", "Business Planning", "Valuation", "Scenario Analysis", "DCF Valuation", "Automation", "Financial Reporting"], // Updated tags
+    tags: [], // Removed all tags
     aiHint: "excel spreadsheet"
   },
   {
     id: "2",
     title: "TennisTracker.pro",
-    subtitle: "Live & Historical Tennis Match Dashboard",
+    subtitle: "under development",
     year: "2025",
-    description: "TennisTracker.pro is an advanced dashboard providing real-time and historical data for tennis matches. It offers users detailed statistics, player performance analysis, match history, and live score tracking. The platform is designed for tennis enthusiasts, bettors, and analysts seeking comprehensive insights into professional tennis tournaments and player dynamics. Key features include customizable alerts, head-to-head comparisons, and in-depth match visualizations.",
-    imageUrl: "https://picsum.photos/seed/tennis/800/600",
+    description: "tba",
+    imageUrl: "/images/tennistracker.png",
     projectUrl: "https://www.TennisTracker.pro",
     repoUrl: undefined,
-    tags: ["Web Development", "Data Visualization", "Sports Analytics", "Real-time Data", "React", "Node.js", "API Integration"],
+    tags: [], // Removed all tags
     aiHint: "tennis dashboard"
   },
 ];
@@ -58,15 +57,6 @@ export function ProjectsSection() {
                 <p className={cn("text-muted-foreground leading-relaxed mt-2 text-sm", index % 2 !== 0 && "md:text-right")}>
                   {project.description}
                 </p>
-                {project.tags && project.tags.length > 0 && (
-                  <div className={cn("flex flex-wrap gap-2 mt-3", index % 2 !== 0 && "md:justify-end")}>
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-sm">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                )}
                 <div className={cn("mt-3 space-x-3", index % 2 !== 0 && "md:justify-end md:flex")}>
                   {project.projectUrl && (
                     <Button variant="link" asChild className="text-primary p-0 h-auto group inline-flex items-center text-xs uppercase tracking-wider">
