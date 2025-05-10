@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -10,27 +11,27 @@ import { cn } from '@/lib/utils';
 const placeholderProjects: Project[] = [
   {
     id: "1",
-    title: "Excel Addin",
-    subtitle: "Financial Modeling & Business Planning Tools", 
-    year: "2024", 
+    title: "Excel Addin for Financial Modeling and Business Planning", // Updated title
+    subtitle: "Financial Modeling & Business Planning Tools",
+    year: "2024",
     description: "Developed a comprehensive Excel add-in designed for financial modeling, business planning, and valuation. This tool empowers financial analysts and business strategists with advanced functionalities to streamline their workflows, perform complex calculations, and generate insightful reports directly within Excel. Key features include scenario analysis, sensitivity testing, discounted cash flow (DCF) valuation models, and customizable templates for various financial statements.",
     imageUrl: "https://picsum.photos/seed/exceladdin/800/600",
-    projectUrl: undefined, 
+    projectUrl: undefined,
     repoUrl: undefined,
-    tags: ["Excel", "VBA", "Financial Modeling", "Business Planning", "Valuation"],
+    tags: ["Excel", "VBA", "Financial Modeling", "Business Planning", "Valuation", "Scenario Analysis", "DCF Valuation", "Automation", "Financial Reporting"], // Updated tags
     aiHint: "excel spreadsheet"
   },
   {
     id: "2",
-    title: "TennisTacker.pro",
+    title: "TennisTracker.pro",
     subtitle: "Live & Historical Tennis Match Dashboard",
-    year: "2025", 
-    description: "An advanced dashboard providing real-time and historical data for tennis matches. TennisTracker.pro offers users detailed statistics, player performance analysis, match history, and live score tracking. The platform is designed for tennis enthusiasts, bettors, and analysts seeking comprehensive insights into professional tennis tournaments and player dynamics. Features include customizable alerts, head-to-head comparisons, and in-depth match visualizations.",
-    imageUrl: "/placeholder-images/project-tennis-tracker.png", // Updated image path
+    year: "2025",
+    description: "TennisTracker.pro is an advanced dashboard providing real-time and historical data for tennis matches. It offers users detailed statistics, player performance analysis, match history, and live score tracking. The platform is designed for tennis enthusiasts, bettors, and analysts seeking comprehensive insights into professional tennis tournaments and player dynamics. Key features include customizable alerts, head-to-head comparisons, and in-depth match visualizations.",
+    imageUrl: "https://picsum.photos/seed/tennis/800/600",
     projectUrl: "https://www.TennisTracker.pro",
     repoUrl: undefined,
-    tags: ["Web Development", "Data Visualization", "Sports Analytics", "Real-time Data"],
-    aiHint: "tennis dashboard" // Updated AI hint
+    tags: ["Web Development", "Data Visualization", "Sports Analytics", "Real-time Data", "React", "Node.js", "API Integration"],
+    aiHint: "tennis dashboard"
   },
 ];
 
@@ -49,12 +50,12 @@ export function ProjectsSection() {
             <article key={project.id} className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
               <div className={cn(
                 "md:col-span-5 space-y-3",
-                index % 2 !== 0 && "md:order-last md:text-right" 
+                index % 2 !== 0 && "md:order-last md:text-right"
               )}>
                 <h3 className="text-primary">{project.title}</h3>
                 {project.subtitle && <p className="text-muted-foreground text-xs font-medium">{project.subtitle}</p>}
                 {project.year && <p className="text-muted-foreground text-xs">{project.year}</p>}
-                <p className={cn("text-muted-foreground leading-relaxed mt-2 text-sm", index % 2 !== 0 && "md:text-right")}> 
+                <p className={cn("text-muted-foreground leading-relaxed mt-2 text-sm", index % 2 !== 0 && "md:text-right")}>
                   {project.description}
                 </p>
                 {project.tags && project.tags.length > 0 && (
@@ -85,7 +86,7 @@ export function ProjectsSection() {
               </div>
               <div className={cn(
                 "md:col-span-7 relative aspect-[4/3] rounded-sm overflow-hidden shadow-xl border border-border/30",
-                index % 2 !== 0 && "md:order-first" 
+                index % 2 !== 0 && "md:order-first"
               )}>
                 {project.imageUrl ? (
                   <Image
