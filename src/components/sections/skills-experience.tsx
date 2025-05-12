@@ -21,7 +21,7 @@ const experienceData: Experience[] = [
     role: "Business Development Intern",
     location: "Hamburg, Germany",
     roleDescription: "Directed the setup and integration of Zendesk, restructuring the Property Management team to enhance operational efficiency. Delivered strategic Competitor Analyses and Business Updates, equipping investors with actionable insights. Championed B2B client onboarding and crafted a Controlling Dashboard, driving measurable performance improvements within the Renting department.",
-    companyDescription: "Condo Group GmbH is a leading property management platform in Germany focused on digitizing and optimizing residential real estate management processes. The company offers innovative SaaS solutions that streamline property management operations, improve tenant communication, and enhance overall efficiency for property managers and real estate companies across the German market."
+    companyDescription: "Condo Group GmbH is a leading property management platform in Germany that digitizes and optimizes residential real estate management processes. The company develops innovative software that streamlines operations, improves tenant communication, and enhances efficiency for property managers and real estate companies across the German market. "
   },
   {
     id: "e3",
