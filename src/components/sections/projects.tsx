@@ -10,27 +10,27 @@ import { cn } from '@/lib/utils';
 const placeholderProjects: Project[] = [
   {
     id: "1",
-    title: "Excel Addin", 
+    title: "Website service", 
     subtitle: "under devlopment",
     year: "2025",
     description: "tba",
-    imageUrl: "/images/exceladdin.png",
+    imageUrl: "https://placehold.co/600x400?text=Nature+Image",
     projectUrl: undefined,
     repoUrl: undefined,
     tags: [], // Removed all tags
-    aiHint: "excel spreadsheet"
+    aiHint: ""
   },
   {
     id: "2",
-    title: "TennisTracker.pro",
+    title: "Business plan service",
     subtitle: "under development",
     year: "2025",
     description: "tba",
-    imageUrl: "/images/tennistracker.png",
-    projectUrl: "https://www.TennisTracker.pro",
+    imageUrl: "https://placehold.co/600x400?text=Nature+Image",
+    projectUrl: "",
     repoUrl: undefined,
     tags: [], // Removed all tags
-    aiHint: "tennis dashboard"
+    aiHint: ""
   },
 ];
 
