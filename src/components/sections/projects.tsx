@@ -14,7 +14,7 @@ const placeholderProjects: Project[] = [
     subtitle: "under devlopment",
     year: "2025",
     description: "tba",
-    imageUrl: "/images/placeholder.png",
+    imageUrl: "/images/websitebuilder.png",
     projectUrl: undefined,
     repoUrl: undefined,
     tags: [], // Removed all tags
@@ -26,7 +26,7 @@ const placeholderProjects: Project[] = [
     subtitle: "under development",
     year: "2025",
     description: "tba",
-    imageUrl: "/images/placeholder.png",
+    imageUrl: "/images/businessplaner.png",
     projectUrl: "",
     repoUrl: undefined,
     tags: [], // Removed all tags
