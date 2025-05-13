@@ -1,87 +1,60 @@
 'use client';
 
 import React from 'react';
+import { SectionTitle } from '@/components/ui/section-title';
+import { cn } from '@/lib/utils';
 
-export const ServicesSection = () => {
+type ServiceCategory = {
+  id: string;
+  title: string;
+  description: string;
+};
+
+const serviceCategories: ServiceCategory[] = [
+  {
+    id: "1",
+    title: "Business Development",
+    description: "I help businesses identify growth opportunities through targeted market research and competitor analysis. My approach includes streamlining operations, restructuring processes for maximum efficiency, and creating custom controlling dashboards that provide clear visibility into your key performance metrics."
+  },
+  {
+    id: "2",
+    title: "Financial Analysis",
+    description: "My financial services combine sophisticated modeling techniques with practical valuation expertise to guide strategic decisions. I conduct thorough assessments of investment opportunities, weighing risks against potential returns, while implementing tailored performance metrics that drive sustainable business growth."
+  },
+  {
+    id: "3",
+    title: "Technical Solutions",
+    description: "From web development and deployment to data analysis using Python and SQL, I deliver technical solutions that solve real business problems. My expertise extends to AI integration and process automation, helping organizations leverage cutting-edge technology to gain competitive advantages."
+  },
+  {
+    id: "4",
+    title: "Project Management",
+    description: "I specialize in coordinating cross-departmental teams to ensure project success through clear communication and aligned objectives. With experience in international project facilitation, I navigate cultural differences while enhancing operational efficiency through strategic planning and systematic improvements."
+  }
+];
+
+export function ServicesSection() {
   return (
-    <section id="services" className="w-full max-w-5xl mx-auto px-4">
-      <h2 className="text-2xl md:text-3xl font-semibold mb-8">Services</h2>
-        
-      {/* Business Development */}
-      <div className="mb-10">
-        <h3 className="text-xl md:text-2xl font-medium mb-4">Business Development:</h3>
-        <ul className="space-y-2 text-gray-800">
-          <li className="flex items-start">
-            <span className="mr-2">-</span>
-            <span>Market research and competitor analysis</span>
-          </li>
-          <li className="flex items-start">
-            <span className="mr-2">-</span>
-            <span>Process optimization and restructuring</span>
-          </li>
-          <li className="flex items-start">
-            <span className="mr-2">-</span>
-            <span>Controlling dashboard creation</span>
-          </li>
-        </ul>
-      </div>
+    <section id="services" className="py-16 md:py-24 space-y-10">
+      <SectionTitle as="h2" className="text-left mb-10 md:mb-14">
+        SERVICES
+      </SectionTitle>
       
-      {/* Financial Analysis */}
-      <div className="mb-10">
-        <h3 className="text-xl md:text-2xl font-medium mb-4">Financial Analysis:</h3>
-        <ul className="space-y-2 text-gray-800">
-          <li className="flex items-start">
-            <span className="mr-2">-</span>
-            <span>Financial modeling and valuation</span>
-          </li>
-          <li className="flex items-start">
-            <span className="mr-2">-</span>
-            <span>Investment opportunity assessment</span>
-          </li>
-          <li className="flex items-start">
-            <span className="mr-2">-</span>
-            <span>Performance metrics improvement</span>
-          </li>
-        </ul>
-      </div>
-      
-      {/* Technical Solutions */}
-      <div className="mb-10">
-        <h3 className="text-xl md:text-2xl font-medium mb-4">Technical Solutions:</h3>
-        <ul className="space-y-2 text-gray-800">
-          <li className="flex items-start">
-            <span className="mr-2">-</span>
-            <span>Web development and deployment</span>
-          </li>
-          <li className="flex items-start">
-            <span className="mr-2">-</span>
-            <span>Python and SQL data analysis</span>
-          </li>
-          <li className="flex items-start">
-            <span className="mr-2">-</span>
-            <span>AI integration and automation</span>
-          </li>
-        </ul>
-      </div>
-      
-      {/* Project Management */}
-      <div className="mb-6">
-        <h3 className="text-xl md:text-2xl font-medium mb-4">Project Management:</h3>
-        <ul className="space-y-2 text-gray-800">
-          <li className="flex items-start">
-            <span className="mr-2">-</span>
-            <span>Team coordination across departments</span>
-          </li>
-          <li className="flex items-start">
-            <span className="mr-2">-</span>
-            <span>International project facilitation</span>
-          </li>
-          <li className="flex items-start">
-            <span className="mr-2">-</span>
-            <span>Operational efficiency enhancement</span>
-          </li>
-        </ul>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        {serviceCategories.map((category) => (
+          <article 
+            key={category.id} 
+            className="bg-background border border-border/40 rounded-md p-5 shadow-sm h-full"
+          >
+            <h3 className="text-primary mb-3 text-base md:text-lg">
+              {category.title}
+            </h3>
+            <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">
+              {category.description}
+            </p>
+          </article>
+        ))}
       </div>
     </section>
   );
-};
+}
