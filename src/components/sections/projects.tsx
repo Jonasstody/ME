@@ -32,6 +32,18 @@ const placeholderProjects: Project[] = [
     tags: [], // Removed all tags
     aiHint: ""
   },
+  {
+    id: "3",
+    title: "Freelancing servicess",
+    subtitle: "brief overview of how i can help you",
+    year: "2025",
+    description: "Business Development:\n- Market research and competitor analysis\n- Process optimization and restructuring\n- Controlling dashboard creation\n\nFinancial Analysis:\n- Financial modeling and valuation\n- Investment opportunity assessment\n- Performance metrics improvement\n\nTechnical Solutions:\n- Web development and deployment\n- Python and SQL data analysis\n- AI integration and automation\n\nProject Management:\n- Team coordination across departments\n- International project facilitation\n- Operational efficiency enhancement",
+    imageUrl: "/images/documentholder.png",
+    projectUrl: "",
+    repoUrl: undefined,
+    tags: [], // Removed all tags
+    aiHint: ""
+  }
 ];
 
 export function ProjectsSection() {
