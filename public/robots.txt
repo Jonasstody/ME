@@ -1,15 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
-# Block specific directories if needed
-# Disallow: /admin/
-# Disallow: /private/
+# Host
+Host: https://jonasfabiankoerl.me
 
-# Allow all bots to access CSS, JS, and images
-Allow: /*.css$
-Allow: /*.js$
-Allow: /images/
-Allow: /assets/
-
-# Specify your sitemap location
+# Sitemaps
 Sitemap: https://jonasfabiankoerl.me/sitemap.xml
