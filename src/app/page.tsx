@@ -1,5 +1,6 @@
 import { HeroSection } from '@/components/sections/hero';
 import { AboutMeSection } from '@/components/sections/about-me';
+import { ServicesSection } from '@/components/sections/services'; 
 import { ProjectsSection } from '@/components/sections/projects';
 import { SkillsExperienceSection } from '@/components/sections/skills-experience';
 import { ContactSection } from '@/components/sections/contact';
@@ -11,6 +12,8 @@ export default function HomePage() {
       <HeroSection /> {/* Corresponds to #hero */}
       <Separator className="my-10 md:my-12" />
       <AboutMeSection /> {/* New About Me section */}
+      <Separator className="my-10 md:my-12" />
+      <ServicesSection /> {/* Add Services section here */}
       <Separator className="my-10 md:my-12" />
       <SkillsExperienceSection /> {/* Corresponds to #experience */}
       <Separator className="my-10 md:my-12" />

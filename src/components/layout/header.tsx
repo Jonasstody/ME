@@ -15,6 +15,7 @@ import React from 'react';
 
 const navItems = [
   { href: '#about-me', label: 'ABOUT ME' },
+  { href: '#services', label: 'SERVICES' }, // Added Services navigation item
   { href: '#experience', label: 'EXPERIENCE' },
   { href: '#projects', label: 'PROJECTS' },
   { href: '#contact', label: 'CONTACT' },
