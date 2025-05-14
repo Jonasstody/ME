@@ -36,7 +36,7 @@ export function AboutMeSection() {
             <div>
               <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Connect</p>
               <a 
-                href="https://www.linkedin.com/in/jonas-koerl" 
+                href="https://www.linkedin.com/in/jonas-fabian-koerl" 
                 className="font-medium text-foreground/80 text-base hover:text-primary transition-colors inline-flex items-center"
                 target="_blank"
                 rel="noopener noreferrer"
