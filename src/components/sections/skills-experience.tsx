@@ -12,7 +12,7 @@ const experienceData: Experience[] = [
     period: "Apr 2025 - Current",
     role: "Freelancing and building own projects",
     location: "São Paulo, Brazil/Remote",
-    roleDescription: "New things learnt so far: 1) building websites and deploying them without relevant coding experience (using firebase, github and vercel) 2) AI automations and integrations using make.com and n8n",
+    roleDescription: "New things learnt so far: 1) building websites and deploying and listing them without relevant coding experience (using firebase, github and vercel) 2) AI automations and integrations using make.com and n8n",
   },
   {
     id: "e2",
